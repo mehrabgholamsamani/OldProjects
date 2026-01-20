@@ -27,3 +27,14 @@ function stepTwo(flavored){
         }
     })
 }
+function stepThree(flavored){
+    return new Promise(function (resolve, reject){
+        let isAvailable = true; 
+        if(isAvailable){
+            setTimeout( () => {resolve(flavored + " and it has " + stocks.toppings[2] + " on top.")},1000)
+        }else{
+            reject("we dont have this topping")
+        }
+    })
+}
+
