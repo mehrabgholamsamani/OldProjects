@@ -38,3 +38,9 @@ function stepThree(flavored){
     })
 }
 
+function onSuccess(data){
+    console.log(data);
+}
+function onError(error){
+    console.log(error);
+}
