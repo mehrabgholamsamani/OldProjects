@@ -44,6 +44,3 @@ function onSuccess(data){
 function onError(error){
     console.log(error);
 }
-
-
-stepOne().then(stepTwo).then(stepThree).then(onSuccess).catch(onError).finally(() => console.log(" have a nice day!"))
