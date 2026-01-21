@@ -6,4 +6,6 @@ async function getData(){
     console.log(data)
 }
 
-getData();
+
+
+document.getElementById("text").textContent = getData();
