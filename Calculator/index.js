@@ -22,92 +22,118 @@ const elements = {
 }
 ///////DATA/////////////
 let show = "";
-let result = "";
 let data = 0;
 
 ///////NUMBERS///////////
 elements.num1.onclick = function(){
-    result += "1";
     show += "1";
     elements.display.textContent = show;
 };
 elements.num2.onclick = function(){
-    result += "2";
     show += "2";
     elements.display.textContent = show;
 };
 elements.num3.onclick = function(){
-    result += "3";
     show += "3";
     elements.display.textContent = show;
 };
 elements.num4.onclick = function(){
-    result += "4";
     show += "4";
     elements.display.textContent = show;
 };
 elements.num5.onclick = function(){
-    result += "5";
     show += "5";
     elements.display.textContent = show;
 };
 elements.num6.onclick = function(){
-    result += "6";
     show += "6";
     elements.display.textContent = show;
 };
 elements.num7.onclick = function(){
-    result += "7";
     show += "7";
     elements.display.textContent = show;
 };
 elements.num8.onclick = function(){
-    result += "8";
     show += "8";
     elements.display.textContent = show;
 };
 elements.num9.onclick = function(){
-    result += "9";
     show += "9";
     elements.display.textContent = show;
 };
 elements.num0.onclick = function(){
-    result += "0";
     show += "0";
     elements.display.textContent = show;
 };
 
 //////FUNCTIONS////////
-elements.clear.onclick = function(){
-    data = 0;
-    result = "";
-    show = "";
-    elements.display.textContent = show;
-};
 elements.plus.onclick = function(){
-    data += parseInt(result);
-    result = "";
     show += "+";
     elements.display.textContent = show;
 };
 elements.minus.onclick = function(){
-    data -= parseInt(result);
-    show += "-";
+    show += "−";
     elements.display.textContent = show;
 };
 elements.multiplication.onclick = function(){
-    data *= parseInt(result);
     show += "×";
     elements.display.textContent = show;
 };
 elements.division.onclick = function(){
-    data /= parseInt(result);
     show += "÷";
     elements.display.textContent = show;
 };
-elements.equal.onclick = function(){
+/////////////////////////////////
+elements.clear.onclick = function(){
     show = "";
-    result = "";
-    elements.display.textContent = data;
+    elements.display.textContent = show;
+};
+/////////////////////////////////
+
+elements.equal.onclick = function(){
+    let numberList = [];
+    let char = 0;
+    for(let i = 0; i < show.length; i++){
+        if(show.charAt(i) === '+'){
+            numberList.push(parseInt( show.slice(char , i ) ));
+            numberList.push('+');
+            char = i + 1;
+        }
+
+        if(show.charAt(i) === '−'){
+            numberList.push(parseInt( show.slice(char , i ) ));
+            numberList.push('−');
+            char = i + 1 ;
+        }
+
+        if(show.charAt(i) === '×'){
+            numberList.push(parseInt( show.slice(char , i ) ));
+            numberList.push('×');
+            char = i + 1;
+        }
+
+        if(show.charAt(i) === '÷'){
+            numberList.push(parseInt( show.slice(char , i ) ));
+            numberList.push('÷');
+            char = i + 1;
+        }
+        
+
+    }
+    numberList.push(parseInt(show.slice(char , show.length)));
+
+    for (let i = 0; i < numberList.length; i++) {
+        if (numberList[i] === '×') {
+            numberList[i - 1] = numberList[i - 1] * numberList[i + 1];
+            numberList = numberList.filter((_, index) => index !== i && index !== i + 1);
+            i--;
+        }
+        if (numberList[i] === '÷') {
+            numberList[i - 1] = numberList[i - 1] / numberList[i + 1];
+            numberList = numberList.filter((_, index) => index !== i && index !== i + 1);
+            i--;
+        }
+    }
+    console.log(numberList)
 };
 
