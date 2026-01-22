@@ -99,6 +99,6 @@ body{
 }
 
 .number:active, .function:active{
-  transform: translateY(1px) scale(0.98);
+  transform: translateY(1px) scale(0.88);
   filter: brightness(0.95);
 }
