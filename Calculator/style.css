@@ -95,7 +95,7 @@ body{
 }
 
 .number:hover, .function:hover{
-  filter: brightness(1.08);
+  filter: brightness(1.18);
 }
 
 .number:active, .function:active{
