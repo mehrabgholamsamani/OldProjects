@@ -37,7 +37,12 @@ body{
     font-weight: 600;
     letter-spacing: 0.02em;
     font-variant-numeric: tabular-nums;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    scrollbar-width: none;  
 }
+.display::-webkit-scrollbar{ display:none; }
 .btn-holder{
     display: flex;
     justify-content: space-between;
@@ -83,7 +88,7 @@ body{
     cursor: pointer;
 }
 .equals{
-    height: 67px;
+    height: 40px;
     background-color: #34C759;
 }
 .number, .function{
@@ -102,3 +107,4 @@ body{
   transform: translateY(1.5px) scale(0.88);
   filter: brightness(0.95);
 }
+
