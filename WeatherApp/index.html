@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="BasicInfo">
+            <select id="citySelect" class="citySelect">
+            <option value="Helsinki" selected>Helsinki</option>
+            <option value="Tampere">Tampere</option>
+            <option value="Turku">Turku</option>
+            <option value="Oulu">Oulu</option>
+            <option value="Jyväskylä">Jyväskylä</option>
+            <option value="Kuopio">Kuopio</option>
+            <option value="Lahti">Lahti</option>
+            <option value="Vaasa">Vaasa</option>
+            <option value="Rovaniemi">Rovaniemi</option>
+            </select>
+            <h1 class="country">Finland <svg
+  width="28"
+  height="20"
+  viewBox="0 0 28 20"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <rect width="28" height="20" rx="3" fill="#f3f4f6"/>
+  <rect x="8" width="4" height="20" fill="#003580"/>
+  <rect y="8" width="28" height="4" fill="#003580"/>
+</svg>
+
+</h1>
+            <h3 class="date" id="date"></h3>
+            <h3 class="time" id="time"></h3>
+        </div>
+
+        <div class="weather-card-cotainer">
+            <div class="weather-card">
+                <img src="icons/cloud.svg" alt="" id="icon1">
+                <h3 id="weatherdate1">cloudy</h3>
+                <h3 id="temperature1">temperature: -9</h3>
+                <h3 id="feelsLike1">feels like: -10</h3>
+                <h3 id="windSpeed1">wind speed: 10km/h</h3>
+            </div>
+            <div class="weather-card">
+                <img src="icons/cloud.svg" alt="" id="icon2">
+                <h3 id="weatherdate2">cloudy</h3>
+                <h3 id="temperature2">temperature: -9</h3>
+                <h3 id="feelsLike2">feels like: -10</h3>
+                <h3 id="windSpeed2">wind speed: 10km/h</h3>
+            </div>
+            <div class="weather-card">
+                <img src="icons/cloud.svg" alt="" id="icon3">
+                <h3 id="weatherdate3">cloudy</h3>
+                <h3 id="temperature3">temperature: -9</h3>
+                <h3 id="feelsLike3">feels like: -10</h3>
+                <h3 id="windSpeed3">wind speed: 10km/h</h3>
+            </div>
+            <div class="weather-card">
+                <img src="icons/cloud.svg" alt="" id="icon4">
+                <h3 id="weatherdate4">cloudy</h3>
+                <h3 id="temperature4">temperature: -9</h3>
+                <h3 id="feelsLike4">feels like: -10</h3>
+                <h3 id="windSpeed4">wind speed: 10km/h</h3>
+            </div>
+            <div class="weather-card">
+                <img src="icons/cloud.svg" alt="" id="icon5">
+                <h3 id="weatherdate5">cloudy</h3>
+                <h3 id="temperature5">temperature: -9</h3>
+                <h3 id="feelsLike5">feels like: -10</h3>
+                <h3 id="windSpeed5">wind speed: 10km/h</h3>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="index.js" defer> </script>
+    
+</body>
+</html>
