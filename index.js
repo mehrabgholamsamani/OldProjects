@@ -12,7 +12,7 @@ function stepOne(){
         if(isAvailable){
             setTimeout(() => {resolve("your ice cream flavor is " + stocks.flavor[0])} , 2000);
         }else{
-            reject("we dont have this flavor");
+            reject("we dont have this flavor" );
         }
     })
 }
