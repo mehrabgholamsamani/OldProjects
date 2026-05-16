@@ -10,7 +10,7 @@ function stepOne(){
     return new Promise(function(resolve,reject){
         let isAvailable = true;
         if(isAvailable){
-            setTimeout(() => {resolve("your ice cream flavor is " + stocks.flavor[0])} ,  2000);
+            setTimeout(() => {resolve("your ice cream flavor is " + stocks.flavor[0])}  ,  2000);
         }else{
             reject("we dont have this flavor" );
         }
